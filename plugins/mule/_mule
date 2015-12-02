@@ -1,0 +1,4 @@
+#compdef mule m
+
+_arguments '-s[sort output]' '1:first arg:(clean deploy go help log ps root start stop status restart home debug nodebug)' '::optional arg:_files' 
+

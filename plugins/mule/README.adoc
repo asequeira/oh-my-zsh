@@ -1,0 +1,49 @@
+= Mule Oh My Zsh Plugin
+Ale Sequeira <http://github.com/asequeira>
+
+Mule Oh My Zsh Plugin helps you to control your Mule Server, mainly helps you to deploy application, start and your server and get information like logs, status o pid.
+
+== Configuration
+
+* Mule Kernel users should set `MULE_SERVER` variable to `mule-standalone`. Its default values is `mule-enterprise-standalone`.
+* Set `MULE_HOME` variable to your Mule Runtime directory, this way you don't have to configure it each time you open a console.
+* Set `MULE_LOG` variable to configure the name of the server log. Default values is `mule_ee.log`, for Mule Kernel change it to `mule.log`.
+* If you use more than one Mule Runtime you can use `MULE_ROOT` variable to configure the directory where your Mule Runtimes will be located. Value by default: `/opt`
+
+== Usage
+
+ mule <command> [argument]
+    
+or the shortcut:
+
+ m <command> [argument]
+
+== Commands
+
+* *clean:* deletes `.mule` directory.
+
+* *deploy:* deploys an application to the current `MULE_HOME` and starts the Mule server.
+
+* *go:* if the version argument is defined cds to `MULE_ROOT/MULE_SERVER-{version}`. If it is not defined cds to `MULE_HOME`
+
+* *help:* prints plugin help
+
+* *log:* tails Mule Server log. To use Mule Kernel edition change `MULE_LOG` variable to `mule.log`.
+
+* *ps:* prints the pid for Mule process. Currently only works in Mac OS.
+
+* *root:* configures the `MULE_ROOT` variable with the argument value. If no argument is provided it is set to `MULE_HOME` parent.
+
+* *start:* starts Mule server.
+
+* *stop:* stops Mule server.
+
+* *status:* return the Mule server status: running|stopped.
+
+* *restart:* restarts the Mule server.
+
+* *home:* set `MULE_HOME` to the argument value or to the current directory.
+
+== License
+
+This plugin is released under [MIT license](MIT-LICENSE.txt).
